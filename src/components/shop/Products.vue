@@ -7,12 +7,21 @@
 </template>
 
 <script>
+  import { mapActions } from 'vuex'
   import Product from './Product'
 
   export default {
     name: 'products',
     components: {
       Product
+    },
+    methods: {
+      ...mapActions({
+        getProducts: 'getProducts'
+      })
+    },
+    mounted () {
+      this.getProducts()
     }
   }
 </script>
