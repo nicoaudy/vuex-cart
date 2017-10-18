@@ -1,19 +1,24 @@
 <template>
   <div class="row">
-    <div class="col-sm-4">
-      <product></product>
+    <div class="col-sm-4" v-for="product in products">
+      <product :product="product"></product>
     </div>
   </div>
 </template>
 
 <script>
-  import { mapActions } from 'vuex'
+  import { mapActions, mapGetters } from 'vuex'
   import Product from './Product'
 
   export default {
     name: 'products',
     components: {
       Product
+    },
+    computed: {
+      ...mapGetters({
+        products: 'products'
+      })
     },
     methods: {
       ...mapActions({
