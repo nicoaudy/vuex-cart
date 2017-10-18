@@ -24,5 +24,11 @@ export const getCart = ({ commit }) => {
     return Promise.resolve()
   })
 }
+
 // remove a product from our cart
+export const removeProductFromCart = ({ commit }, productId) => {
+  return axios.delete(`http://127.0.0.1:8000/api/cart/${productId}`).then(() => {
+    commit('removeFromCart', productId)
+  })
+}
 // remove all products from our cart
