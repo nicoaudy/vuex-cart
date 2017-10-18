@@ -8,7 +8,7 @@ import * as getters from './getters'
 import * as mutations from './mutations'
 import * as actions from './actions'
 
-export const new Vuex.Store({
+export default Vuex.Store({
   state,
   getters,
   mutations,
