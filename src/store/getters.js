@@ -4,5 +4,8 @@ export const products = (state) => {
 }
 
 // cart
+export const cart = (state) => {
+  return state.cart
+}
 // cart item count
 // cart total
