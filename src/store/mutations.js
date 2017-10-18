@@ -18,6 +18,10 @@ export const appendToCart = (state, { product, quantity }) => {
     })
   }
 }
+
 // set cart
+export const setCart = (state, items) => {
+  state.cart = items
+}
 // clear cart
 // remove from cart
