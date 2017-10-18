@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="container">
-      {{ cartItemCount }} items in cart (£0.00)
+      {{ cartItemCount }} items in cart (£{{ cartTotal }})
     </div>
   </header>
 </template>
@@ -13,7 +13,8 @@
     name: 'top-header',
     computed: {
       ...mapGetters({
-        cartItemCount: 'cartItemCount'
+        cartItemCount: 'cartItemCount',
+        cartTotal: 'cartTotal'
       })
     }
   }
